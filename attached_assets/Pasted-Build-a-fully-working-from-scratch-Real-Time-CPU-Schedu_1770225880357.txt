@@ -1,0 +1,65 @@
+Build a fully working, from-scratch Real-Time CPU Scheduling Algorithms Simulator with C++ backend + Node.js API + React frontend, suitable as a showable Operating Systems system-programming project.
+Core Scheduling Engine (C++)
+* Implement a tick-based scheduler:
+    * Clock Tick → Scheduler Decision → Execute → Preempt → Update
+* Implement these algorithms from scratch:
+    * FCFS
+    * Round Robin (configurable time quantum)
+    * Shortest Process Next (SJF non-preemptive)
+    * Shortest Remaining Time (preemptive SJF)
+    * Highest Response Ratio Next (HRRN)
+    * Multilevel Feedback Queue (FB)
+    * Feedback with Varying Time Quantum (FBV)
+    * Aging
+* Use a common process structure (PID, arrival time, burst time, remaining time, priority).
+* Compute per-process and average:
+    * Waiting Time
+    * Turnaround Time
+    * Response Time
+* Generate execution timeline data suitable for animated Gantt charts.
+API Layer
+* Use Node.js (Express) to execute the C++ scheduler.
+* Accept process inputs as JSON.
+* Return metrics + tick-by-tick timeline data as JSON.
+Frontend (React)
+* Earth-tone UI only: beige, brown shades, white, black.
+* No algorithm dropdown.
+* Each scheduling algorithm must have its own dedicated section.
+* Each section must include:
+    * A preloaded classic example that auto-runs and visualizes on load.
+    * An option to run one custom user-defined example for that algorithm.
+    * Animated Gantt chart visualization driven by clock ticks.
+    * Table showing per-process metrics and averages.
+Preemptive vs Non-Preemptive Comparison
+* Implement a split-screen comparison view:
+    * Left: FCFS / SJF (non-preemptive)
+    * Right: SRT / Round Robin (preemptive)
+* Use the same input on both sides.
+* Visually compare execution order, preemption, and metrics.
+Synthetic Workload Generator
+* Generate workloads:
+    * CPU-bound
+    * I/O-bound
+    * Mixed
+    * Burst-heavy
+* Run these workloads across multiple algorithms.
+* Analyze and display which algorithms perform best using average metrics.
+Project Requirements
+* Fully runnable on Replit (free tier) with one-click run.
+* Clean modular structure (scheduler core, API, frontend).
+* Clear README explaining usage and system design.
+Goal
+* Create a professional, system-level OS simulator that demonstrates real CPU scheduling behavior, algorithm trade-offs, fairness, and responsiveness using clear visualizations.
+
+
+
+
+
+
+
+
+
+
+
+
+ChatGPT can make mistakes. Check important info. See Cookie Prefer

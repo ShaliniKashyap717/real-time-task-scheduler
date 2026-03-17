@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Earth Tone Palette - Space separated HSL */
+  
+  /* Backgrounds: Beige/Linen feel */
+  --background: 40 33% 96%;     /* #F9F7F2 */
+  --foreground: 30 10% 20%;     /* #38332E */
+
+  /* Cards: White/Off-white */
+  --card: 40 33% 98%;
+  --card-foreground: 30 10% 20%;
+
+  /* Primary: Saddle Brown / Leather */
+  --primary: 25 76% 31%;        /* #8B4513 */
+  --primary-foreground: 40 33% 98%;
+
+  /* Secondary: Sienna / Terracotta */
+  --secondary: 17 65% 44%;      /* #BA5A34 */
+  --secondary-foreground: 40 33% 98%;
+
+  /* Muted: Sand / Taupe */
+  --muted: 40 20% 90%;
+  --muted-foreground: 30 10% 40%;
+
+  /* Accents */
+  --accent: 40 40% 85%;
+  --accent-foreground: 25 76% 31%;
+
+  --destructive: 0 65% 51%;
+  --destructive-foreground: 40 33% 98%;
+
+  --border: 40 20% 85%;
+  --input: 40 20% 85%;
+  --ring: 25 76% 31%;
+
+  --radius: 0.5rem;
+
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-primary;
+  }
+  
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Scrollbar for that technical feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--secondary) / 0.5);
+}
